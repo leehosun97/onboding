@@ -1,0 +1,576 @@
+/* 공통 */
+.pc{
+display: block;
+}
+.mo{
+    display: none;
+}
+/* 헤더 관련 */
+#header{
+    height: 60px;
+    line-height: 60px;
+}
+#header .logo {
+    display: inline-block;
+    width: 40PX;
+    height: 40px;
+    background-image: url(../images/logo.png);
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 19.2%;
+}
+
+/* 배너관련 */
+.banner_wrap{
+    padding-top: 31.25%;
+    background-image: url(../images/banner_bg_pc.png);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.banner_wrap::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 0;
+}
+.banner_wrap .banner_content{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    z-index: 10;
+    text-align: center;
+}
+.banner_wrap .banner_content h1{
+    font-size: 50px;
+    color: #fff;
+    line-height: 75px;
+}
+.banner_wrap .banner_content p{
+    font-size: 22px;
+    color: #fff;
+    margin-top: 24px;
+}
+.banner_wrap .btn_area{
+    margin-top: 32px;
+}
+.banner_wrap .btn_area a{
+   margin-left: 16px; 
+}
+.banner_wrap .btn_area a:first-child{
+    margin-left: 0;
+}
+
+/* 슬라이드 관련 */
+.slide_wrap h2{
+    font-size:50px;
+    padding:120px 0;
+    text-align: center;
+}
+.slide_wrap h2 span{
+    color: #0086ff;
+}
+.mainSlide .swiper-button-prev{
+    width: 64px;
+    height: 64px;
+    background-image: url(../images/slide_prev_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 5%;
+}
+.mainSlide .swiper-button-next{
+    width: 64px;
+    height: 64px;
+    background-image: url(../images/slide_next_img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 5%;
+}
+.mainSlide .swiper-button-prev:after{
+    display: none;
+}
+
+.mainSlide .swiper-button-next:after{
+    display: none;
+}
+
+/* 기능관련 */
+.mt4{margin-top:4px;}
+.skill_wrap{
+ padding-top: 150px;
+ padding:150px 19.2% 200px;
+}
+.skill_wrap .grid_box{
+    display: grid;
+}
+.skill_wrap .blue_txt{
+    font-size: 22px;
+    color: #0086ff;
+}
+.skill_wrap .grid_box.title{
+    grid-template-columns: 290px auto;
+}
+.skill_wrap .grid_box h3{
+    font-size: 40px;
+    color: #363A3D;
+}
+.skill_wrap .title p{
+    font-size: 28px;
+    color: #363a3d;
+    margin-left: 110px;
+    margin-top: 3px;
+}
+.skill_wrap ul.grid_box{
+    grid-template-columns:1fr 1fr;
+}
+.skill_wrap ul{
+    margin-top: 60px;
+}
+.skill_wrap ul li{
+    padding:64px 0 85px;
+}
+.skill_wrap ul .img_box{
+    display: inline-block;
+}
+.skill_wrap ul h3{
+    margin-top: 32px;
+}
+.skill_wrap ul span{
+    display: inline-block;
+    margin-top: 18px;
+}
+
+/* 하단베너 관련 */
+.bottom_banner_wrap{
+    padding-top: 24.64%;
+    background-image: url(../images/bottom_banner_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bottom_banner_wrap:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0086FF;
+    opacity: 0.6;
+    z-index: 0; 
+}
+.bottom_banner_content{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    z-index: 10;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    line-height:75px;
+}
+.bottom_banner_content .displayfluid{
+    display: inline;
+}
+.bottom_banner_content span{
+    position: relative;
+}
+.bottom_banner_content span:after{
+    content:"";
+    display: inline-block;
+    width: 100%;
+    height: 17px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #FFCE00;
+    opacity: 0.4;
+}
+
+/* 푸터관련 */
+.footer_Wrap{
+    padding:40px 16.7% 80px;
+}
+.footer_menu{
+    font-size: 0;
+}
+.footer_menu li{
+    display: inline-block;
+    font-size: 16px;
+    color: #363A3D;
+    padding:0 20px;
+    position: relative;
+}
+.footer_menu li:first-child{
+    padding-left: 0;
+}
+.footer_menu li::after{
+    content: "";
+    width: 1px;
+    height: 10px;
+    background-color: #363A3D;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 0;
+}
+.footer_menu li:first-child::after{
+    display: none;
+}
+.footer_content{
+    margin-top: 40px;
+}
+.footer_content .company{
+    padding-left: 200px;
+    background-image: url(../images/footer_logo_img.png);
+    background-repeat: no-repeat;
+    background-position:0 0;
+}
+.footer_content .company h4{
+    font-weight: 400;
+    font-size: 18px;
+}
+.footer_content .company a{
+    font-size: 36px;
+    font-weight: 700;
+    color: #363A3D;
+    margin-top: 10px;
+}
+.footer_content .company p{
+    font-size: 13px;
+    color: #363A3D;
+    margin-top: 10px;
+}
+
+/* 미디어쿼리 */
+/* 1450px */
+@media screen and (max-width:1460px) {
+    /* 슬라이드 관련 */
+    .slide_wrap h2{
+        font-size: 40px;
+        padding: 100px 0;
+    }
+    .bottom_banner_content{
+        font-size: 40px;
+    }
+}
+/* 1250px */
+@media screen and (max-width:1250px) {
+    /* 배너관련 */
+    .banner_wrap .banner_content h1{
+        font-size: 35px;
+        line-height: 55px;
+    }
+
+    /* 슬라이드 관련 */
+    .slide_wrap h2{
+        font-size: 35px;
+        padding: 80px 0;
+    }
+    
+    /* 기능 관련*/
+    .skill_wrap{
+        padding-top: 75px;
+        padding-bottom: 100px;
+    }
+    .skill_wrap ul{
+        margin-top: 30px;
+    }
+    .skill_wrap .grid_box h3{
+        font-size: 30px;
+    }
+    .skill_wrap ul li{
+        padding:45px 0 60px;
+    }
+    .skill_wrap ul .img_box{
+        width: 90px;
+    }
+    /* 하단베너 관련 */
+    .bottom_banner_content{
+        font-size: 35px;
+        line-height: 55px;
+    }
+    .skill_wrap .title p{
+       font-size: 24px;
+       margin-left: 40px;
+    }
+    .skill_wrap .grid_box h3{
+
+    }
+}
+/* 1050 px*/
+@media screen and (max-width:1050px) {
+    .banner_wrap .banner_content h1{
+        font-size: 28px;
+        line-height: 46px;
+    }
+
+    /* 슬라이드 관련 */
+    .slide_wrap h2{
+        font-size: 28px;
+        padding: 60px 0;
+    }
+
+    /* 하단베너 관련 */
+    .bottom_banner_content{
+        font-size: 28px;
+        line-height: 46px;
+    }
+    .skill_wrap .title p{
+        margin-left: 20px;
+     }
+}
+
+/* 780px 테블릿 */
+@media screen and (max-width:780px) {
+    /*공통*/
+    .pc{display: none;}
+    .mo{display: block;}
+
+    /* 헤더 관련 */
+    #header{
+        padding:24px 0;
+        border-bottom: 1px solid #F2F3F4;
+        background-color: rgba(0,0,0,0.6);
+    }
+    #header .logo{
+        margin-left: 32px;
+    }
+    /* 배너관련 */
+    .banner_wrap{
+        padding-top: 88.3%;
+        background-image: url(../images/banner_bg_mo.png);
+    }
+    .banner_wrap .banner_content h1{
+        font-size: 52px;
+        line-height: 78px;
+    }
+    .banner_wrap .banner_content p{
+        font-size: 30px;
+        margin-top: 72px;
+    }
+    .banner_wrap .btn_area{
+        margin-top: 60px;
+    }
+    .banner_wrap .btn_area a{
+        margin-left: 32px;
+    }
+    /* 슬라이드 관련 */
+    .slide_wrap h2{
+        font-size: 28px;
+        padding:110px 0;
+        font-size: 34px;
+        color: #363A3D;
+        font-weight: 400;
+    }
+    .slide_wrap h2 span{
+        font-weight: 700;
+    }
+    .slide_con{
+        background-color: #E3F0FC;
+        padding-top: 75%;
+    }
+    .slide_con .slide_box{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding:0 9%;
+    }
+    .slide_con .img_box{
+        display: inline-block;
+        margin-top: 80px;
+        
+    }
+    .slide_con .blue_txt{
+        display: inline-block;
+        font-size: 30px;
+        padding-top: 80px;
+        color: #0086FF;
+    }
+    .slide_con h3{
+        font-size: 52px;
+        color: #363A3D;
+        line-height: 78px;
+        padding-top: 8px;
+    }
+    .slide_con p{
+        font-size: 30px;
+        line-height: 45px;
+        color: #363A3D;
+        margin-top: 4px;
+    }
+    .mainSlide .swiper-button-prev{
+        width: 48px;
+        height: 48px;
+        background-size: 18px auto;
+        left: 14px;
+    }
+    .mainSlide .swiper-button-next{
+        width: 48px;
+        height: 48px;
+        background-size: 18px auto;
+        right: 14px;
+    }
+
+    /* 기능 관련 */
+    .skill_wrap{
+        text-align: center;
+        padding:160px 0;
+    }
+    .skill_wrap .img_box{
+        padding-top: 64px;
+    }
+    .skill_wrap .img_box:first-child{
+        padding-top: 0;
+    }
+    /* 하단베너 관련 */
+    .bottom_banner_wrap{
+        padding-top: 75%;
+        background-image: url(../images/bottom_banner_bg_mo.png);
+    }
+    .bottom_banner_content{
+        font-size: 48px;
+        line-height: 72px;
+    }
+    .bottom_banner_content .displayfluid{
+        display: block;
+    }
+    .footer_Wrap{
+        padding: 64px 32px 128px;
+    }
+    .footer_content .company{
+        padding-left: 0;
+        padding-bottom: 144px;
+        background-position: 0 100%;
+    }
+}
+
+/* 480px 모바일 */
+@media screen and (max-width:480px) {
+     /* 헤더 관련 */
+     #header{
+        padding:12px 0;
+        line-height: 24px;
+        height: auto;
+    }
+    #header .logo{
+        width: 24px;
+        height: 24px;
+        margin-left: 16px;
+        background-size: cover;
+    }
+    /* 배너관련 */
+    .banner_wrap .banner_content h1{
+        font-size: 26px;
+        line-height: 39px;
+    }
+    .banner_wrap .banner_content p{
+        font-size: 15px;
+        margin-top: 36px;
+    }
+    .banner_wrap .btn_area{
+        margin-top: 30px;
+    }
+    .banner_wrap .btn_area a{
+        margin-left: 16px;
+    }
+    /* 슬라이드 관련 */
+    .slide_wrap h2{
+        font-size: 14px;
+        padding: 55px 0;
+        font-size: 17px;
+    }
+    .slide_con .img_box{
+        margin-top: 40px;
+        
+    }
+    .slide_con .blue_txt{
+        font-size: 15px;
+        padding-top: 40px;
+    }
+    .slide_con h3{
+        font-size: 26px;
+        line-height: 39px;
+        padding-top: 4px;
+    }
+    .slide_con p{
+        font-size: 15px;
+        line-height: 22.5px;
+        margin-top: 2px;
+    }
+    .mainSlide .swiper-button-prev{
+        width: 24px;
+        height: 24px;
+        background-size: 9px auto;
+        left: 7px;
+    }
+    .mainSlide .swiper-button-next{
+        width: 24px;
+        height: 24px;
+        background-size: 9px auto;
+        right: 7px;
+    }
+
+    /* 기능 관련 */
+    .skill_wrap{
+        padding:80px 0;
+    }
+    .skill_wrap .img_box{
+        padding-top: 32px;
+    }
+
+    /* 하단베너 관련 */
+    .bottom_banner_content{
+        font-size: 24px;
+        line-height: 36px;
+    }
+    /* 푸터 관련 */
+    .footer_Wrap{
+        padding: 32px 16px 64px;
+    }
+    .footer_menu li{
+        font-size: 11px;
+    }
+    .footer_menu li::after{
+        height: 6px;
+    }
+    .footer_content{
+        margin-top: 32px;
+    }
+    .footer_content .company{
+        padding-bottom: 72px;
+        background-size: auto 48px;
+    }
+    .footer_content .company h4{
+        font-size: 11px;
+    }
+    .footer_content .company a{
+        font-size: 24px;
+        line-height: 36px;
+        margin-top: 10px;
+    }
+    .footer_content .company p{
+        font-size: 11px;
+        line-height: 16.5px;
+        
+    }
+}
