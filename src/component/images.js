@@ -9,6 +9,8 @@ import skillImg03 from '../images/skil_img03.png';
 import skillImg04 from '../images/skil_img04.png';
 import skillImg05 from '../images/skil_img05.png';
 import skillImg06 from '../images/skil_img06.png';
+import doownloadInfoImg from '../images/download_info_img.png';
+
 /* 모바일 */
 import MoImg01 from '../images/mo_img01.png';
 import MoImg02 from '../images/mo_img02.png';
@@ -33,6 +35,7 @@ const images = {
   MoImg03,
   MoImg04,
   MoImg05,
+  doownloadInfoImg,
 };
 
 export default images;

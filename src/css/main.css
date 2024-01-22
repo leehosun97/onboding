@@ -71,6 +71,33 @@ display: block;
 .banner_wrap .btn_area a:first-child{
     margin-left: 0;
 }
+.doownloadInfoBox{
+    position: relative;
+    margin-left: 16px;
+}
+.doownloadInfoBox .img_wrap{
+    display: none;
+    width: 800px;
+    position: absolute;
+    top: 82px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.doownloadInfoBox .img_wrap.on{
+    display: inline-block;
+}
+.doownloadInfoBox .img_box{
+    display: inline-block;
+    position: relative;
+}
+.doownloadInfoBox .close_btn{
+    position: absolute;
+    top: 48px;
+    right: 48px;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 /* 슬라이드 관련 */
 .slide_wrap h2{
