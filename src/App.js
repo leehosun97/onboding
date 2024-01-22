@@ -194,9 +194,9 @@ function App() {
           <footer>
             <div className="footer_Wrap">
               <ul className="footer_menu">
-                <li><a href="#">회사소개</a></li>
-                <li><a href="#">이용약관</a></li>
-                <li><a href="#">개인정보처리방침</a></li>
+                <li><Link to="http://www.propline.co.kr/intro.html">회사소개</Link></li>
+                <li><Link to="#">이용약관</Link></li>
+                <li><Link to="#">개인정보처리방침</Link></li>
               </ul>
               <div className="footer_content">
                 <div className="company">
