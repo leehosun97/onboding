@@ -16,7 +16,7 @@ import Images from "./component/images"
 function App() {
 
   //pc 슬라이드
-  const slidesPc = [
+  const slidesPcData = [
     Images.slideImage01,
     Images.slideImage02,
     Images.slideImage03,
@@ -25,7 +25,7 @@ function App() {
   ]
 
   //모바일 슬라이드
-  const skillsData = [
+  const slideMoData = [
     {
       blueTxt: 'PC 모바일 연동',
       title: '계정하나로 편하게\n언제 어디서나',
@@ -73,6 +73,50 @@ function App() {
   const closeDownloadPop = () => {
     setIsImgWrapOpen(false);
   };
+
+  //기능 관련 PC버전
+  const skillPcData = [
+    {
+      img : Images.skillImg01,
+      title : "공동중개",
+      txt : '전국 부동산 중개인과의 공동중개, \n 이제는 지역 제한 없이 자유롭게 하세요.'
+    },
+    {
+      img : Images.skillImg02,
+      title : "매물찾습니다",
+      txt : '급하게 매물이 필요하면 원하는 조건에 맞게 \n 바로 원하는 매물을 제안받아보세요.'
+    },
+    {
+      img : Images.skillImg03,
+      title : "일반채팅",
+      txt : '우리 사무소 중개원들과 단체톡, 1:1 톡 가능, \n 원하는 사람과 편하게 정보를 주고 받아보세요.'
+    },
+    {
+      img : Images.skillImg04,
+      title : "오픈채팅",
+      txt : '연락처가 없어도 관심사가 맞는 중개사들끼리 \n 전용 커뮤니티를 직접 만들고, 참여도 해보세요.'
+    },
+    {
+      img : Images.skillImg05,
+      title : "중개업소",
+      txt : '지역에 구애받지 않고 전국의 \n 원하는 부동산 중개인과 빠르게 연락해보세요.'
+    },
+    {
+      img : Images.skillImg06,
+      title : "관리자메뉴",
+      txt : '내가 소속된 중개사무소의 구성원 추가, 관리자 권한부여 등 \n 회사 운영의 편의성을 갖춘 관리 기능까지 제공합니다.'
+    },
+  ]
+  // 기능 관련 모바일 버전
+  const skillMoData = [
+    Images.MoImg01,
+    Images.MoImg02,
+    Images.MoImg03,
+    Images.MoImg04,
+    Images.MoImg05,
+    Images.MoImg06,
+
+  ]
   return (
       <div className="App">
         <div className="onboding_wrap">
@@ -108,10 +152,10 @@ function App() {
               <h2>중개업소 업무 환경에 최적화된 <span>공실투데이</span>의 다양한 기능을 소개합니다.</h2>
               <div className="slide_box">
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper mainSlide">
-                {slidesPc.map((slide, index) => (
+                {slidesPcData.map((slidePc, index) => (
                   <SwiperSlide key={index}>
                     <div className="img_box">
-                      <img src={slide} alt={`슬라이드 이미지 ${index + 1}`} />
+                      <img src={slidePc} alt={`슬라이드 이미지 ${index + 1}`} />
                     </div>
                   </SwiperSlide>
                 ))}
@@ -122,15 +166,15 @@ function App() {
               <h2>중개업소 업무 환경에 최적화된<br/> <span>공실투데이</span>의 다양한 기능을 소개합니다.</h2>
               <div className="slide_box">
                 <Swiper navigation={true} modules={[Navigation]} className="mySwiper mainSlide">
-                  {skillsData.map((skill, index) => (
+                  {slideMoData.map((slideMo, index) => (
                     <SwiperSlide key={index}>
                       <div className="slide_con">
                         <div className="slide_box">
-                          <span className="blue_txt">{skill.blueTxt}</span>
-                            {skill.image && <div className="img_box"><img src={skill.image} alt={`Slide ${index + 1} 이미지`} /></div>}
-                            {skill.title && (
+                          <span className="blue_txt">{slideMo.blueTxt}</span>
+                            {slideMo.image && <div className="img_box"><img src={slideMo.image} alt={`Slide ${index + 1} 이미지`} /></div>}
+                            {slideMo.title && (
                               <h3>
-                                {skill.title.split('\n').map((line1, lineIndex) => (
+                                {slideMo.title.split('\n').map((line1, lineIndex) => (
                                   <Fragment key={lineIndex}>
                                     {line1}
                                     <br />
@@ -138,9 +182,9 @@ function App() {
                                 ))}
                               </h3>
                             )}
-                            {skill.description && (
+                            {slideMo.description && (
                               <p>
-                                {skill.description.split('\n').map((line2, lineIndex) => (
+                                {slideMo.description.split('\n').map((line2, lineIndex) => (
                                   <Fragment key={lineIndex}>
                                     {line2}
                                     <br />
@@ -159,51 +203,33 @@ function App() {
               <p className="blue_txt">PC 모바일 연동</p>
               <div className="grid_box mt4 title">
                 <div>
-                  <h3>계정하나로 편하게 <br/> 언제 어디서나1</h3>
+                  <h3>계정하나로 편하게 <br/> 언제 어디서나</h3>
                 </div>
                 <div>
                   <p>언제 어디서나 PC와 모바일App 으로 업무를 간편하게 처리하세요.</p>
                 </div>
               </div>
               <ul className="grid_box">
-                <li>
-                  <div className="img_box"><img src={Images.skillImg01} alt="공동중개 이미지"></img></div>
-                  <h3>공동중개</h3>
-                  <span>전국 부동산 중개인과의 공동중개, <br/>이제는 지역 제한 없이 자유롭게 하세요.</span>
-                </li>
-                <li>
-                  <div className="img_box"><img src={Images.skillImg02} alt="매물찾습니다 이미지"></img></div>
-                  <h3>매물찾습니다</h3>
-                  <span>급하게 매물이 필요하면 원하는 조건에 맞게<br/>바로 원하는 매물을 제안받아보세요.</span>
-                </li>
-                <li>
-                  <div className="img_box"><img src={Images.skillImg03} alt="일반채팅 이미지"></img></div>
-                  <h3>일반채팅</h3>
-                  <span>우리 사무소 중개원들과 단체톡, 1:1 톡 가능,<br/>원하는 사람과 편하게 정보를 주고 받아보세요.</span>
-                </li>
-                <li>
-                  <div className="img_box"><img src={Images.skillImg04} alt="오픈채팅 이미지"></img></div>
-                  <h3>오픈채팅</h3>
-                  <span>연락처가 없어도 관심사가 맞는 중개사들끼리<br/>전용 커뮤니티를 직접 만들고, 참여도 해보세요.</span>
-                </li>
-                <li>
-                  <div className="img_box"><img src={Images.skillImg05} alt="중개업소 이미지"></img></div>
-                  <h3>중개업소</h3>
-                  <span>지역에 구애받지 않고 전국의<br/>원하는 부동산 중개인과 빠르게 연락해보세요.</span>
-                </li>
-                <li>
-                  <div className="img_box"><img src={Images.skillImg06} alt="관리자메뉴 이미지"></img></div>
-                  <h3>관리자메뉴</h3>
-                  <span>내가 소속된 중개사무소의 구성원 추가, 관리자 권한부여 등<br/>회사 운영의 편의성을 갖춘 관리 기능까지 제공합니다.</span>
-                </li>
+                {skillPcData.map((skill, index) => (
+                  <li key={index}>
+                    <div className="img_box"><img src={skill.img} alt={`스킬 이미지 ${index + 1}`}></img></div>
+                    <h3>{skill.title}</h3>
+                    <span>
+                      {skill.txt.split('\n').map((line1, lineIndex) => (
+                        <Fragment key={lineIndex}>
+                          {line1}
+                          <br/>
+                        </Fragment>
+                      ))}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </section>
             <section className="skill_wrap mo">
-              <div className="img_box"><img src={Images.MoImg01} alt="PC연동 모바일 이미지"></img></div>
-              <div className="img_box"><img src={Images.MoImg02} alt="공동중개 모바일 이미지"></img></div>
-              <div className="img_box"><img src={Images.MoImg03} alt="매물찾습니다 모바일 이미지"></img></div>
-              <div className="img_box"><img src={Images.MoImg04} alt="채팅 모바일 이미지"></img></div>
-              <div className="img_box"><img src={Images.MoImg05} alt="관리자메뉴 모바일 이미지"></img></div>
+              {skillMoData.map((skillMo , index)=>(
+                <div className="img_box"><img src={skillMo} alt={`모바일 스킬 이미지 ${index + 1}`}></img></div>
+              ))}
             </section>
             <section className="bottom_banner_wrap">
               <div className="bottom_banner_content">
