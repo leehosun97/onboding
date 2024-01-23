@@ -114,7 +114,7 @@ function App() {
     Images.MoImg03,
     Images.MoImg04,
     Images.MoImg05,
-    Images.MoImg06,
+
 
   ]
   return (
