@@ -159,7 +159,7 @@ function App() {
               <p className="blue_txt">PC 모바일 연동</p>
               <div className="grid_box mt4 title">
                 <div>
-                  <h3>계정하나로 편하게 <br/> 언제 어디서나</h3>
+                  <h3>계정하나로 편하게 <br/> 언제 어디서나1</h3>
                 </div>
                 <div>
                   <p>언제 어디서나 PC와 모바일App 으로 업무를 간편하게 처리하세요.</p>
